@@ -89,7 +89,7 @@
 			</settings>
 		</column>
 
-		<column name="status">
+		<column name="status" component="Magento_Ui/js/grid/columns/select">
 			<settings>
                 <options class="Magento\Cms\Model\Block\Source\IsActive"/>
                 <filter>select</filter>

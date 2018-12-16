@@ -66,3 +66,6 @@ atlassian*
 /generated/*
 !/generated/.htaccess
 .DS_Store
+
+docker/db
+docker/logs

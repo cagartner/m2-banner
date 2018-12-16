@@ -18,7 +18,7 @@ class UpgradeData implements UpgradeDataInterface
         ModuleContextInterface $context
     ) {
         if (version_compare($context->getVersion(), "1.0.0", "<")) {
-            //Your upgrade script
+            // upgrade
         }
     }
 }

@@ -17,11 +17,10 @@ class InstallSchema implements InstallSchemaInterface
         SchemaSetupInterface $setup,
         ModuleContextInterface $context
     ) {
-        //Your install script
 
-        $table_redstage_banner = $setup->getConnection()->newTable($setup->getTable('redstage_banner'));
+        $table = $setup->getConnection()->newTable($setup->getTable('redstage_banner'));
 
-        $table_redstage_banner->addColumn(
+        $table->addColumn(
             'banner_id',
             \Magento\Framework\DB\Ddl\Table::TYPE_INTEGER,
             null,
@@ -29,7 +28,7 @@ class InstallSchema implements InstallSchemaInterface
             'Entity ID'
         );
 
-        $table_redstage_banner->addColumn(
+        $table->addColumn(
             'name',
             \Magento\Framework\DB\Ddl\Table::TYPE_TEXT,
             255,
@@ -37,7 +36,7 @@ class InstallSchema implements InstallSchemaInterface
             'name'
         );
 
-        $table_redstage_banner->addColumn(
+        $table->addColumn(
             'banner',
             \Magento\Framework\DB\Ddl\Table::TYPE_TEXT,
             null,
@@ -45,7 +44,7 @@ class InstallSchema implements InstallSchemaInterface
             'banner'
         );
 
-        $table_redstage_banner->addColumn(
+        $table->addColumn(
             'status',
             \Magento\Framework\DB\Ddl\Table::TYPE_SMALLINT,
             null,
@@ -53,7 +52,7 @@ class InstallSchema implements InstallSchemaInterface
             'status'
         );
 
-        $table_redstage_banner->addColumn(
+        $table->addColumn(
             'position',
             \Magento\Framework\DB\Ddl\Table::TYPE_TEXT,
             255,
@@ -61,6 +60,6 @@ class InstallSchema implements InstallSchemaInterface
             'position'
         );
 
-        $setup->getConnection()->createTable($table_redstage_banner);
+        $setup->getConnection()->createTable($table);
     }
 }
