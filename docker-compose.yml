@@ -2,7 +2,7 @@ version: '3.6'
 
 services:
     magento:
-        image: udovicic/echo:apache-php7.1
+        image: cagartner/magento-apache-7.1
         ports:
         - "80:80"
         expose:
