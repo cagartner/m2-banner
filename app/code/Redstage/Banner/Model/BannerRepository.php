@@ -7,6 +7,7 @@ use Magento\Framework\Api\SearchCriteria\CollectionProcessorInterface;
 use Magento\Framework\Api\SearchCriteriaInterface;
 use Magento\Framework\Exception\CouldNotSaveException;
 use Redstage\Banner\Api\Data\BannerInterface;
+use Redstage\Banner\Api\Data\BannerSearchResultsInterface;
 use Redstage\Banner\Model\ResourceModel\Banner\CollectionFactory as BannerCollectionFactory;
 use Magento\Store\Model\StoreManagerInterface;
 use Redstage\Banner\Model\ResourceModel\Banner as ResourceBanner;
@@ -177,7 +178,7 @@ class BannerRepository implements BannerRepositoryInterface
     /**
      * Get list of banners
      * @param SearchCriteriaInterface $criteria
-     * @return \Redstage\Banner\Api\Data\BannerSearchResultsInterface
+     * @return BannerSearchResultsInterface
      */
     public function getList(
         SearchCriteriaInterface $criteria
@@ -206,7 +207,7 @@ class BannerRepository implements BannerRepositoryInterface
 
     /**
      * @param null $position
-     * @return \Redstage\Banner\Api\Data\BannerSearchResultsInterface
+     * @return BannerSearchResultsInterface
      */
     public function getListByPosition($position=null)
     {

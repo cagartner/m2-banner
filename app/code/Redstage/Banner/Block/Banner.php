@@ -18,7 +18,7 @@ use Redstage\Banner\Model\BannerRepository;
 class Banner extends Template
 {
     /**
-     * @var string
+     * @var string Default template
      */
     protected $_template = 'Redstage_Banner::banner.phtml';
 

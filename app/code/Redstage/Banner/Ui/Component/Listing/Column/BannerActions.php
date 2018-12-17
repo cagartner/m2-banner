@@ -7,12 +7,28 @@ use Magento\Framework\UrlInterface;
 use Magento\Framework\View\Element\UiComponent\ContextInterface;
 use Magento\Framework\View\Element\UiComponentFactory;
 
+/**
+ * Class BannerActions
+ * @package Redstage\Banner\Ui\Component\Listing\Column
+ */
 class BannerActions extends \Magento\Ui\Component\Listing\Columns\Column
 {
+    /**
+     * URL path to see details of banner
+     */
     const URL_PATH_DETAILS = 'redstage_banner/banner/details';
+    /**
+     * URL path to edit a banner
+     */
     const URL_PATH_EDIT = 'redstage_banner/banner/edit';
+    /**
+     * URL path to delete a banner
+     */
     const URL_PATH_DELETE = 'redstage_banner/banner/delete';
 
+    /**
+     * @var UrlInterface
+     */
     protected $urlBuilder;
 
     /**
@@ -28,7 +44,8 @@ class BannerActions extends \Magento\Ui\Component\Listing\Columns\Column
         UrlInterface $urlBuilder,
         array $components = [],
         array $data = []
-    ) {
+    )
+    {
         $this->urlBuilder = $urlBuilder;
         parent::__construct($context, $uiComponentFactory, $components, $data);
     }
@@ -71,7 +88,7 @@ class BannerActions extends \Magento\Ui\Component\Listing\Columns\Column
                 }
             }
         }
-        
+
         return $dataSource;
     }
 }
